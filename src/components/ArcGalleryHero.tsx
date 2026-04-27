@@ -94,8 +94,19 @@ const ArcGalleryHero = ({
                 }}
               >
                 <div
-                  className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-border bg-card transition-transform hover:scale-105 w-full h-full"
-                  style={{ transform: `rotate(${angle / 4}deg)` }}
+                  className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-border bg-card w-full h-full"
+                  style={{
+                    transform: `rotate(${angle / 4}deg)`,
+                    transition: 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease',
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = `rotate(${angle / 4 + (i % 2 === 0 ? 6 : -6)}deg) scale(1.12) translateY(-6px)`;
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.25)';
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = `rotate(${angle / 4}deg)`;
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = '';
+                  }}
                 >
                   <img
                     src={src}
