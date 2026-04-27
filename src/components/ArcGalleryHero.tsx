@@ -36,6 +36,7 @@ const ArcGalleryHero = ({
     { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/9ee96e8f-f05a-45be-bdb4-ab4c2c119c0e.PNG', title: 'Грузовой эвакуатор', description: 'Лендинг для сервиса грузового эвакуатора в Иркутске — круглосуточно, от 5000 руб.' },
     { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/f7e54347-ebd1-4c00-9b1b-c4e266cbc20a.PNG', title: 'Легковой и грузовой эвакуатор', description: 'Лендинг с выбором типа эвакуатора — быстрая эвакуация по всей Иркутской области 24/7' },
     { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/ff638e15-2d08-417f-90dc-ef5481bdf305.PNG', title: 'Газета «Славное море»', description: 'Новостной сайт газеты Южного Прибайкалья — архив, статьи, анонсы с 1931 года' },
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/3051946d-b393-41a6-8b4a-f11e2004385f.PNG', title: 'Эвакуатор в Слюдянке', description: 'Лендинг эвакуатора по Культукскому тракту, Тункинскому и Кабанскому району — 24/7' },
   ];
 
   useEffect(() => {
