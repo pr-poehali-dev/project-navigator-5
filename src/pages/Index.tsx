@@ -1,5 +1,6 @@
 import ArcGalleryHero from "@/components/ArcGalleryHero";
 import ContactsBlock from "@/components/ContactsBlock";
+import PricingBlock from "@/components/PricingBlock";
 
 const Index = () => {
   const images = [
@@ -26,6 +27,7 @@ const Index = () => {
         cardSizeSm={80}
         className="pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-24 lg:pb-24"
       />
+      <PricingBlock />
       <ContactsBlock />
     </main>
   );
