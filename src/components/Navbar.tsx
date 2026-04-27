@@ -31,8 +31,12 @@ const Navbar = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="font-bold text-xl tracking-tight text-foreground select-none">
-          <span className="text-primary">●</span> Логотип
+        <a href="/" className="select-none">
+          <img
+            src="https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/68f8c3cf-211d-4b3c-8d80-73327402c1ca.png"
+            alt="Сайты Прибайкалья"
+            className="h-10 w-auto"
+          />
         </a>
 
         <nav className="flex items-center gap-8">
