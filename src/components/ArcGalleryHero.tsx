@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PortfolioModal from '@/components/PortfolioModal';
 
 type ArcGalleryHeroProps = {
   images: string[];
@@ -29,6 +30,15 @@ const ArcGalleryHero = ({
     radius: radiusLg,
     cardSize: cardSizeLg,
   });
+  const [portfolioOpen, setPortfolioOpen] = useState(false);
+
+  const portfolioItems = [
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/files/bc874a76-d215-4fbb-b8b1-ad2ce27d65f0.jpg', title: 'Ресторан', description: 'Лендинг для ресторана с меню и онлайн-бронированием столиков' },
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/files/2799dd8b-e15e-4aa7-80f6-db5375e7fc2b.jpg', title: 'Фитнес-клуб', description: 'Продающая страница для спортзала с тарифами и записью на пробное занятие' },
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/files/ebb065fe-f124-4db0-b5a8-8086c72b4fce.jpg', title: 'Салон красоты', description: 'Лендинг для салона красоты с онлайн-записью и прайсом услуг' },
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/files/4e358922-c1e9-486c-9f76-8df2c70dd2e3.jpg', title: 'Хендмейд-магазин', description: 'Страница интернет-магазина handmade товаров с каталогом и корзиной' },
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/files/0c2f06f2-85ea-4957-8a22-44750ce41215.jpg', title: 'IT-компания', description: 'Корпоративный сайт IT-компании с портфолио и формой заявки' },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -110,12 +120,20 @@ const ArcGalleryHero = ({
             <a href="tel:+79025768517" className="w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center">
               Заказать лендинг
             </a>
-            <button className="w-full sm:w-auto px-6 py-3 rounded-full border border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200">
+            <button
+              onClick={() => setPortfolioOpen(true)}
+              className="w-full sm:w-auto px-6 py-3 rounded-full border border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200"
+            >
               Смотреть портфолио
             </button>
           </div>
         </div>
       </div>
+      <PortfolioModal
+        open={portfolioOpen}
+        onClose={() => setPortfolioOpen(false)}
+        items={portfolioItems}
+      />
     </section>
   );
 };
