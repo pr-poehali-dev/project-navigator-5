@@ -38,6 +38,7 @@ const ArcGalleryHero = ({
     { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/ff638e15-2d08-417f-90dc-ef5481bdf305.PNG', title: 'Газета «Славное море»', description: 'Новостной сайт газеты Южного Прибайкалья — архив, статьи, анонсы с 1931 года' },
     { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/3051946d-b393-41a6-8b4a-f11e2004385f.PNG', title: 'Эвакуатор в Слюдянке', description: 'Лендинг эвакуатора по Культукскому тракту, Тункинскому и Кабанскому району — 24/7' },
     { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/37b2df29-ef58-4c3f-9bbe-990f0c3f2e83.PNG', title: 'Lucky English School', description: 'Сайт школы английского языка — индивидуальное обучение и мини-группы' },
+    { image: 'https://cdn.poehali.dev/projects/f4fbcbce-665a-43d8-b74a-7833718f15fc/bucket/e7326656-2f73-4af0-a52d-2af2ca18b5e5.PNG', title: 'Психолог-гипнолог', description: 'Сайт специалиста по гипнозу — лечение гипнозом, регрессивный гипноз, услуги и цены' },
   ];
 
   useEffect(() => {
