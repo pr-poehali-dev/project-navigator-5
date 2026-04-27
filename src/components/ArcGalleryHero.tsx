@@ -63,7 +63,7 @@ const ArcGalleryHero = ({
   const step = (endAngle - startAngle) / (count - 1);
 
   return (
-    <section className={`relative overflow-hidden bg-background min-h-screen flex flex-col ${className}`}>
+    <section className={`relative bg-background min-h-screen flex flex-col ${className}`}>
       <div
         className="relative mx-auto"
         style={{
@@ -91,7 +91,10 @@ const ArcGalleryHero = ({
                   animationDelay: `${i * 100}ms`,
                   animationFillMode: 'forwards',
                   zIndex: count - i,
+                  overflow: 'visible',
                 }}
+                onMouseEnter={e => { e.currentTarget.style.zIndex = '999'; }}
+                onMouseLeave={e => { e.currentTarget.style.zIndex = String(count - i); }}
               >
                 <div
                   className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-border bg-card w-full h-full"
